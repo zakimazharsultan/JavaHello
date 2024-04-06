@@ -3,13 +3,13 @@ pipeline{
   stages{
     stage('Build'){
       steps{
-        sh 'docker build -t myjavaimg .'
+        sh 'sudo docker build -t myjavaimg .'
       }
     }
     
     stage('Run'){
       steps{
-        sh 'docker run myjavaimg'
+        sh 'sudo docker run myjavaimg'
       }
     }
   }
